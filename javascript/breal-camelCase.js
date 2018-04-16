@@ -3,5 +3,5 @@
 // casing, using a space between words.
 
 function solution(string) {
-  return string.match(/(^[a-z]+)|([A-Z][a-z]*)/g).join(' ');
+  return string.match(/(^[a-z]+)|([A-Z][a-z]*)/g).join(" ");
 }
