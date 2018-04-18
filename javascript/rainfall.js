@@ -5,7 +5,7 @@
 
 //     function: mean(town, strng) should return the average of rainfall for the city town and the strng data or data1 (In R this function is called avg).
 //     function: variance(town, strng) should return the variance of rainfall for the city town and the strng data or data1.
-
+// @flow
 const re = /\d+\.\d+/g;
 function mean(town, strng) {
   const arr = strng.split("\n");
