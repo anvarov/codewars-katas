@@ -12,18 +12,15 @@
 // Your task is to write a function longestSlideDown (in ruby: longest_slide_down) that takes a pyramid representation as argument and returns its' longest
 
 function longestSlideDown(pyramid) {
-  let total = 0;
   const myPyramid = pyramid;
   if (myPyramid.length === 1) return myPyramid[0][0];
-  for (let i = pyramid.length - 2; i >= 0; i--) {
-    for (let j = 0; j <= i; ++j) {
+  for (let i = pyramid.length - 2; i >= 0; i -= 1) {
+    for (let j = 0; j <= i; j += 1) {
       myPyramid[i][j] += Math.max.apply(null, [
         myPyramid[i + 1][j],
         myPyramid[i + 1][j + 1]
       ]);
     }
   }
-  total =
-    myPyramid[0][0] + Math.max.apply(null, [myPyramid[1][0], myPyramid[1][1]]);
-  return total;
+  return myPyramid[0][0];
 }
